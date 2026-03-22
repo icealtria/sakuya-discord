@@ -262,12 +262,6 @@ const extension: SakuyaExtension = {
     }
 
     ctx.registerAdapter((handler) => new DiscordAdapter(config.token, handler, config));
-  },
-  metadata: {
-    "name": "discord-adapter",
-    "version": "0.0.1",
-    "description": "Discord adapter for Sakuya",
-    "author": "icealtria",
   }
 };
 
