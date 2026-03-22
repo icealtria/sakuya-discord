@@ -235,7 +235,6 @@ function parseChannelKey(channelKey: string):
 
 // Extension entry point
 const extension: SakuyaExtension = {
-  name: "discord-adapter",
   activate(ctx: ExtensionContext) {
     const configPath = join(ctx.extensionDir, "config.json");
     let config: DiscordConfig = {
@@ -263,6 +262,12 @@ const extension: SakuyaExtension = {
     }
 
     ctx.registerAdapter((handler) => new DiscordAdapter(config.token, handler, config));
+  },
+  metadata: {
+    "name": "discord-adapter",
+    "version": "0.0.1",
+    "description": "Discord adapter for Sakuya",
+    "author": "icealtria",
   }
 };
 
