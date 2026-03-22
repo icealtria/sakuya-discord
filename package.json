@@ -1,0 +1,21 @@
+{
+  "name": "sakuya-discord",
+  "version": "0.1.0",
+  "description": "Discord adapter extension for Sakuya",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build ./index.ts --outdir ./dist --target bun"
+  },
+  "dependencies": {
+    "discord.js": "^14.25.1",
+    "sakuya-types": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3"
+  }
+}
